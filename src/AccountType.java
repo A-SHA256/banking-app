@@ -1,0 +1,6 @@
+public enum AccountType {
+    STANDARD_CHECKING,
+    PREMIUM_CHECKING,
+    BASIC_SAVINGS,
+    HIGH_SAVINGS
+}
