@@ -22,4 +22,8 @@ public class BankAccount {
     AccountType getAccountType() {
         return accountType;
     }
+
+    void deposit(double amount) {
+        this.balance += amount;
+    }
 }
