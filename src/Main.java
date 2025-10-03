@@ -5,7 +5,7 @@ import java.util.Map;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Map<String, BankAccount> listOfAccounts = getBankAccountMap(2);
+        Map<String, BankAccount> listOfAccounts = getBankAccountMap(1);
 
 
         for (Map.Entry<String, BankAccount> acc: listOfAccounts.entrySet()) {
@@ -14,7 +14,7 @@ public class Main {
                 System.out.printf("Account Type: %s%nAccount Overdraft Limit: %d%n", checkingAcc.getAccountType().toString(), checkingAcc.getOverdraftLimit());
 
                 //CHECK OVERDRAFT LIMIT AND WITHDRAW
-                checkingAcc.withdrawMoney(10_400);
+                checkingAcc.withdrawMoney(10_600);
                 System.out.printf("Current Balance: %.2f%n", checkingAcc.getBalance());
                 //CHECK DEPOSIT
                 checkingAcc.deposit(2000);

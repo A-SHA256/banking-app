@@ -11,23 +11,12 @@ public class CheckingAccount extends BankAccount {
     }
 
     public void withdrawMoney(double amount) {
-        double limit;
-        if (getAccountType().equals(AccountType.STANDARD_CHECKING)) {
-            limit = getBalance() - amount;
-            if (limit < overdraftLimit) {
-                System.out.println("Maximum amount exceeded, try again");
-                System.out.println();
-            } else {
-                setBalance(limit);
-            }
-        } else if(getAccountType().equals(AccountType.PREMIUM_CHECKING)) {
-            limit = getBalance() - amount;
-            if (limit < overdraftLimit) {
-                System.out.println("Maximum amount exceeded, try again");
-                System.out.println();
-            } else {
-                setBalance(limit);
-            }
+        double limit =  getBalance() - amount;
+        if (limit < overdraftLimit) {
+            System.out.println("Maximum amount exceeded, try again");
+            System.out.println();
+        } else {
+            setBalance(limit);
         }
     }
 
